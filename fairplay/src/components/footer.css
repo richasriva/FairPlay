@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    background: linear-gradient(90deg, #4A90E2, #8E44AD); /* Correct gradient background */
+    padding: 0px 30px;
+    position: relative;
+    height: 150px;
+    /* box-shadow: 0 -4px 10px rgba(58, 48, 48, 0.2); */
+    transition: background 0.3s, box-shadow 0.3s;
+    color: white; /* White text color */
+}
+
+.footer:hover {
+    background: linear-gradient(90deg, #8E44AD, #4A90E2); /* Reverse gradient on hover */
+    /* box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #FFD700; /* Optional hover effect for links */
+}
+
+.footer p {
+    margin: 0;
+}

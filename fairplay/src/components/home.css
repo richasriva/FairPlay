@@ -1,0 +1,305 @@
+/* src/pages/Home.css */
+
+/* General Styles */
+/* src/pages/Home.css */
+
+/* General Styles */
+/* src/pages/Home.css */
+
+/* General Styles */
+.home-container {
+    font-family: 'Arial, sans-serif';
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #0b3d5b; /* Deep blue background */
+    position: relative;
+    overflow: hidden;
+    height: 70vh; /* Adjust height as needed */
+}
+
+/* Overlay for better text visibility */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+    z-index: 2; /* Ensure text is above overlay */
+    color: #ffea00; /* Golden color for the text */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+}
+
+.primary-btn {
+    background-color: #ffd600; /* Bright golden color */
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #ffb300; /* Darker golden color on hover */
+}
+
+.secondary-btn {
+    background-color: #007bff; /* Blue */
+    color: #fff;
+}
+
+.secondary-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+    z-index: 1; /* Ensure image is above overlay */
+}
+
+.hero-image img {
+    max-width: 40%; /* Full width of the container */
+    height: 40%;/* Ensures image covers the area nicely */
+    border-radius: 150px; /* Rounded corners for a classy look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Optional: Add some decorative elements, if desired */
+.decorative-elements {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.decorative-elements img {
+    max-width: 100px; /* Size of decorative elements */
+    position: absolute;
+    right: 20px; /* Positioning as needed */
+    bottom: 20px; /* Positioning as needed */
+    opacity: 0.5; /* Semi-transparent for layering effect */
+}
+
+
+/* Join Now Button */
+.join-now-btn {
+    background-color: #f5a623; /* Bright Gold */
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    padding: 0.75rem 2rem; /* More padding for a larger button */
+    border-radius: 25px; /* Consistent rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.join-now-btn:hover {
+    background-color: #f39f20; /* Darker Gold on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 70%;
+    max-height: 70%;
+    height: auto;
+}
+
+/* Features Section */
+.features-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Very Light Grey */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4a90e2; /* Sky Blue */
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #ffffff; /* White */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e94e77; /* Soft Pink */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Upcoming Matches Section */
+.upcoming-matches-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff; /* White */
+    text-align: center;
+}
+
+.upcoming-matches-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4a90e2; /* Sky Blue */
+}
+
+.matches-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.match-card {
+    background-color: #f9f9f9; /* Very Light Grey */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.match-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.match-info .team img {
+    width: 50px;
+    height: 50px;
+}
+
+.match-info .vs {
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.match-details p {
+    margin: 0.5rem 0;
+}
+
+.match-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.match-btn:hover {
+    background-color: #0056b3; /* Darker Blue on hover */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #e9ecef; /* Light Grey */
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4a90e2; /* Sky Blue */
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+    padding: 4rem 2rem;
+    background-color: #3d5a80; /* Charcoal Blue */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+}
+
+.why-choose-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff; /* White for heading */
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #ffffff; /* White */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+    font-weight: bold;
+    color: #3e3e3e; /* Dark Grey */
+}

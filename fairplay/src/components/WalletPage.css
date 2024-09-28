@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #f1f1f1; /* Light text for dark mode */
+  }
+  
+  .wallet-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .wallet-summary {
+    background-color: #1e1e1e; /* Dark card */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #ffd700; /* Accent color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .wallet-summary:hover {
+    transform: scale(1.05);
+  }
+  
+  .wallet-summary h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .wallet-summary .amount {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .transaction-list {
+    margin-top: 30px;
+    background-color: #1e1e1e; /* Dark card */
+    border-radius: 10px;
+    padding: 20px;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .transaction-list h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .transaction-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: aliceblue;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s;
+  }
+  
+  .transaction-list li:hover {
+    background-color: #333;
+  }
+  
+  .transaction-list .description {
+    font-size: 1em;
+  }
+  
+  .transaction-list .amount {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .transaction-list .amount.credit {
+    color: #4caf50; /* Green for credit */
+  }
+  
+  .transaction-list .amount.debit {
+    color: #f44336; /* Red for debit */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .wallet-container {
+      padding: 10px;
+    }
+  
+    .wallet-summary {
+      padding: 15px;
+    }
+  
+    .wallet-summary .amount {
+      font-size: 2em;
+    }
+  
+    .transaction-list li {
+      padding: 10px;
+    }
+  
+    .transaction-list .description,
+    .transaction-list .amount {
+      font-size: 0.9em;
+    }
+  }
+  

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #4A90E2, #8E44AD); /* Gradient background */
+    padding: 15px 30px;
+    position: relative;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(90deg, #8E44AD, #4A90E2); /* Reverse gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s; /* Animation effect */
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar-links ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Additional animation */
+  }
+  
+  .navbar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .hamburger:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: all 0.3s;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, #4A90E2, #8E44AD); /* Gradient for mobile menu */
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    .navbar-links.active {
+      max-height: 300px; /* Adjust based on the number of items */
+    }
+  
+    .navbar-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links ul li {
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
