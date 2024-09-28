@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FairPlay/static/css/main.2975ff6f.css",
+    "main.js": "/FairPlay/static/js/main.618390b3.js",
+    "static/js/453.78113eac.chunk.js": "/FairPlay/static/js/453.78113eac.chunk.js",
+    "static/media/banner.jpg": "/FairPlay/static/media/banner.b6c4134f4879ddf01b3a.jpg",
+    "index.html": "/FairPlay/index.html",
+    "main.2975ff6f.css.map": "/FairPlay/static/css/main.2975ff6f.css.map",
+    "main.618390b3.js.map": "/FairPlay/static/js/main.618390b3.js.map",
+    "453.78113eac.chunk.js.map": "/FairPlay/static/js/453.78113eac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2975ff6f.css",
+    "static/js/main.618390b3.js"
+  ]
+}
