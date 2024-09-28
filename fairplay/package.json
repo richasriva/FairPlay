@@ -20,8 +20,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://richasriva/FairPlay"
   },
+  "homepage": "https://richasriva,github.io/FairPlay",
   "eslintConfig": {
     "extends": [
       "react-app",
