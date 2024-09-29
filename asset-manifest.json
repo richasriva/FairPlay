@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FairPlay/static/css/main.2975ff6f.css",
-    "main.js": "/FairPlay/static/js/main.618390b3.js",
-    "static/js/453.78113eac.chunk.js": "/FairPlay/static/js/453.78113eac.chunk.js",
-    "static/media/banner.jpg": "/FairPlay/static/media/banner.b6c4134f4879ddf01b3a.jpg",
-    "index.html": "/FairPlay/index.html",
-    "main.2975ff6f.css.map": "/FairPlay/static/css/main.2975ff6f.css.map",
-    "main.618390b3.js.map": "/FairPlay/static/js/main.618390b3.js.map",
-    "453.78113eac.chunk.js.map": "/FairPlay/static/js/453.78113eac.chunk.js.map"
+    "main.css": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/css/main.2975ff6f.css",
+    "main.js": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/js/main.104bb260.js",
+    "static/js/453.78113eac.chunk.js": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/js/453.78113eac.chunk.js",
+    "static/media/banner.jpg": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/media/banner.b6c4134f4879ddf01b3a.jpg",
+    "index.html": "/FairPlay/tree/main/fairplay/src/components/homepage.js/index.html",
+    "main.2975ff6f.css.map": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/css/main.2975ff6f.css.map",
+    "main.104bb260.js.map": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/js/main.104bb260.js.map",
+    "453.78113eac.chunk.js.map": "/FairPlay/tree/main/fairplay/src/components/homepage.js/static/js/453.78113eac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2975ff6f.css",
-    "static/js/main.618390b3.js"
+    "static/js/main.104bb260.js"
   ]
 }
