@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
-import './Auth.css'; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom';
+import "./SignUp.css"; // Ensure your CSS file is named correctly
 
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle signup logic here
-    console.log('Signed up with:', { name, email, password });
+    const res = await fetch('http://localhost:5000/api/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      console.log('Signed up:', data);
+      // Redirect to login page
+      navigate('/login');
+    } else {
+      alert('Signup failed!');
+    }
   };
 
   return (
@@ -17,30 +34,30 @@ const Signup = () => {
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2 className="auth-title">Signup</h2>
         <input
+          className="auth-input"
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="auth-input"
         />
         <input
+          className="auth-input"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="auth-input"
         />
         <input
+          className="auth-input"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="auth-input"
         />
-        <button type="submit" className="auth-button">Signup</button>
+        <button className="auth-button" type="submit">Signup</button>
       </form>
     </div>
   );

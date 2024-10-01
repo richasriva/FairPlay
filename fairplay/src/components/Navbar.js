@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file for styling
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, handleLogout }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -14,13 +14,20 @@ const Navbar = () => {
       <div className={`navbar-links ${isMobile ? 'active' : ''}`}>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/Login">Login</a></li>
-          <li><a href="/Signup">SignUp</a></li>
+          {!isAuthenticated ? (
+            <>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Signup</a></li>
+            </>
+          ) : (
+            <li>
+              <button onClick={handleLogout} className="logout-button">Logout</button>
+            </li>
+          )}
           <li><a href="/blog">Blogs</a></li>
           <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/wallet">Wallet</a></li>
           <li><a href="/profile">Profile</a></li>
-          
         </ul>
       </div>
       <div className="hamburger" onClick={toggleMobileMenu}>

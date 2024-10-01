@@ -1,0 +1,79 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+    background-color: #121212; /* Dark background */
+    animation: fadeIn 0.5s ease-in-out; /* Animation */
+  }
+  
+  .auth-form {
+    background-color: #1f1f1f; /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    height: 400px;
+    animation: scaleIn 0.5s ease-in-out; /* Animation */
+  }
+  
+  .auth-title {
+    color: #ffffff; /* White text for title */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .auth-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    margin-left: 45px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff; /* White text for inputs */
+  }
+  
+  .auth-input::placeholder {
+    color: #cccccc; /* Light gray placeholder text */
+  }
+  
+  .auth-button {
+    margin-left: 45px;
+    width: 80%;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #ff4081; /* Button color */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* White text for button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-button:hover {
+    background-color: #ff80ab; /* Lighter color on hover */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  

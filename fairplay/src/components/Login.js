@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import './Auth.css'; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Logged in with:', { email, password });
+    // Assume login is successful
+    onLogin(); // Update the authentication state in App.js
+    navigate('/'); // Redirect to homepage or any other page after login
   };
 
   return (
     <div className="auth-container">
       <form className="auth-form" onSubmit={handleSubmit}>
-        <h2 className="auth-title">LOGIN</h2>
+        <h2 className="auth-title">Login</h2>
         <input
           type="email"
           placeholder="Email"
@@ -37,4 +39,4 @@ const Login = () => {
   );
 };
 
-export default Login; 
+export default Login;
