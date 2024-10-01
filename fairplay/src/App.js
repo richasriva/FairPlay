@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Updated Navbar to handle Login/Logout
+import Navbar from './components/Navbar'; 
 import Homepage from './components/HomePage';
 import BlogPage from './components/BlogPage';
 import Dashboard from './components/Dashboard';
@@ -13,12 +13,18 @@ import Footer from './components/footer';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // State to track login
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 120);
+
+    // Check local storage for authentication status
+    const token = localStorage.getItem('token'); // Assuming you store a token
+    if (token) {
+      setIsAuthenticated(true);
+    }
 
     // Cleanup the timer
     return () => clearTimeout(timer);
@@ -27,11 +33,13 @@ const App = () => {
   // Function to handle user login
   const handleLogin = () => {
     setIsAuthenticated(true);
+    localStorage.setItem('token', 'your_token_here'); // Store a token in local storage
   };
 
   // Function to handle user logout
   const handleLogout = () => {
     setIsAuthenticated(false);
+    localStorage.removeItem('token'); // Remove token from local storage
   };
 
   return (
@@ -50,7 +58,7 @@ const App = () => {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/wallet" element={<WalletPage />} />
-            <Route path="/login" element={<Login onLogin={handleLogin} />} /> {/* Pass handleLogin to Login */}
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
           <Footer />
